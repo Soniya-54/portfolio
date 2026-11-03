@@ -48,6 +48,8 @@ p,h1,h2,h3{margin:0}
 .about-bio-text{font-size:clamp(19px,2vw,28px);color:#757575;line-height:1.55;text-wrap:pretty}
 .chips{display:flex;flex-wrap:wrap;gap:10px;font-size:20px}
 .chips span{border:2px solid #111;padding:6px 16px}
+.media-fill{width:100%;height:100%;display:block;object-fit:cover}
+.about-photo-img{width:100%;aspect-ratio:1/1;display:block;border-radius:22px;object-fit:cover}
 .footer{border-top:3px solid #111;padding-top:80px;padding-bottom:48px;display:flex;flex-direction:column;gap:24px}
 .footer-heading{font-size:clamp(32px,4.4vw,56px);font-weight:400;line-height:1.1;color:#111;text-wrap:balance}
 .footer-email{font-size:clamp(18px,2vw,28px);text-decoration:underline;word-break:break-word}
@@ -85,7 +87,6 @@ p,h1,h2,h3{margin:0}
 .footer-meta{flex-direction:column;gap:8px}
 }
 </style>
-<script src="./image-slot.js"></script>
 </helmet>
 <div style="background:#fff;color:#111;min-height:100vh;max-width:1200px;margin:0 auto">
 
@@ -102,7 +103,7 @@ p,h1,h2,h3{margin:0}
 <section id="top" class="hero">
   <div class="hero-img">
     
-    <img src="uploads/photo-1793722119358-i6eg.svg" alt="Soniya Khadka illustration">
+    <img src="./hero-illustration.svg" alt="Soniya Khadka illustration">
   </div><div class="hero-text">
     <h1 class="hero-h1">Hey! I am Soniya.<br>Annndd... I design.</h1>
     <div class="hero-ctas">
@@ -160,7 +161,7 @@ p,h1,h2,h3{margin:0}
   <h2 class="sec-title">More of my work with personal touches</h2>
   <a href="https://instagram.com/soniya.designs" target="_blank" rel="noopener" class="ig-link">@soniya.designs</a>
   <div class="card-wrap"><div class="card more-card">
-    <image-slot id="more-work-2" shape="rect" style="width:100%;height:100%" placeholder="Drop creative work — illustrations, graphics, motion"></image-slot>
+    <img src="./instagram.png" alt="Instagram creative work" class="media-fill">
   </div></div>
   
 </section>
@@ -169,7 +170,7 @@ p,h1,h2,h3{margin:0}
   <h2 class="sec-title">Between design and growth...</h2>
   <div class="about-grid">
     <div class="about-photo">
-      <image-slot id="about-photo" shape="rounded" radius="22" style="width:100%;aspect-ratio:1/1;height:auto" placeholder="Drop your photo"></image-slot>
+      <img src="./my-image.jpeg" alt="Soniya Khadka" class="about-photo-img">
       <div style="display:flex;align-items:center;gap:12px">
         <svg width="48" height="32" viewBox="0 0 48 32" fill="none" style="flex-shrink:0">
           <path d="M4,24 Q16,8 36,16 M30,8 L38,16 L30,24" stroke="#111" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path>
@@ -197,7 +198,7 @@ p,h1,h2,h3{margin:0}
     <svg width="48" height="28" viewBox="0 0 48 28" fill="none" style="flex-shrink:0">
       <path d="M4,14 Q20,6 38,14 M31,6 L40,14 L31,22" stroke="{{ accent }}" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path>
     </svg>
-    <a href="mailto:soniyakhadka2061@gmail.com" class="footer-email" style="color:{{ accent }}">soniyakhadka2061@gmail.com</a>
+    <a href="mailto:soniyakhadka2061@gmail.com" class="footer-email" style="color:#018FED">soniyakhadka2061@gmail.com</a>
   </div>
   <div class="footer-meta">
     <span>Kathmandu, Nepal</span>
