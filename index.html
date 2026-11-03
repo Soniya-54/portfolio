@@ -221,10 +221,29 @@ class Component extends DCLogic {
   var host = 'gmail.com';
   var email = user + '@' + host;
   var mailto = 'mailto:' + email;
-  var links = document.querySelectorAll('.js-email-link');
-  for (var i = 0; i < links.length; i++) {
-    links[i].setAttribute('href', mailto);
+  function wireEmailLinks() {
+    var links = document.querySelectorAll('.js-email-link');
+    for (var i = 0; i < links.length; i++) {
+      links[i].setAttribute('href', mailto);
+    }
   }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', wireEmailLinks);
+  } else {
+    wireEmailLinks();
+  }
+
+  window.addEventListener('load', wireEmailLinks);
+  setTimeout(wireEmailLinks, 250);
+  setTimeout(wireEmailLinks, 1200);
+
+  document.addEventListener('click', function (e) {
+    var link = e.target && e.target.closest ? e.target.closest('.js-email-link') : null;
+    if (!link) return;
+    e.preventDefault();
+    window.location.href = mailto;
+  });
 })();
 </script>
 </body>
