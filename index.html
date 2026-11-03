@@ -95,7 +95,7 @@ p,h1,h2,h3{margin:0}
   <nav class="nav-links">
     <a href="#work">Work</a>
     <a href="#about">About</a>
-    <a href="mailto:soniyakhadka2061@gmail.com">Contact</a>
+    <a href="#" class="js-email-link">Contact</a>
     <a href="#" style="text-decoration:underline">Résumé</a>
   </nav>
 </header>
@@ -107,7 +107,7 @@ p,h1,h2,h3{margin:0}
   </div><div class="hero-text">
     <h1 class="hero-h1">Hey! I am Soniya.<br>Annndd... I design.</h1>
     <div class="hero-ctas">
-      <a href="mailto:soniyakhadka2061@gmail.com" class="hero-cta" style="color: #018FED">Connect with me</a>
+      <a href="#" class="hero-cta js-email-link" style="color: #018FED">Connect with me</a>
       <a href="#" class="hero-cta" style="color: #018FED">Download Resume</a>
     </div>
   </div>
@@ -198,7 +198,7 @@ p,h1,h2,h3{margin:0}
     <svg width="48" height="28" viewBox="0 0 48 28" fill="none" style="flex-shrink:0">
       <path d="M4,14 Q20,6 38,14 M31,6 L40,14 L31,22" stroke="{{ accent }}" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path>
     </svg>
-    <a href="mailto:soniyakhadka2061@gmail.com" class="footer-email" style="color:#018FED">Email me here</a>
+    <a href="#" class="footer-email js-email-link" style="color:#018FED">Email me here</a>
   </div>
   <div class="footer-meta">
     <span>Kathmandu, Nepal</span>
@@ -214,6 +214,18 @@ p,h1,h2,h3{margin:0}
 class Component extends DCLogic {
   renderVals() { return { accent: this.props.accent ?? '#2F4BFF' }; }
 }
+</script>
+<script>
+(function () {
+  var user = 'soniyakhadka2061';
+  var host = 'gmail.com';
+  var email = user + '@' + host;
+  var mailto = 'mailto:' + email;
+  var links = document.querySelectorAll('.js-email-link');
+  for (var i = 0; i < links.length; i++) {
+    links[i].setAttribute('href', mailto);
+  }
+})();
 </script>
 </body>
 </html>
