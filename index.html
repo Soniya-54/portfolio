@@ -26,8 +26,8 @@ p,h1,h2,h3{margin:0}
 .nav-logo{font-size:26px;color:#111}
 .nav-links{display:flex;gap:32px;font-size:22px;flex-wrap:wrap}
 .hero{display:flex;align-items:center;gap:48px;padding:24px 80px 72px}
-.hero-img{flex:0 1 420px;min-width:0;position:relative}
-.hero-img img{width:100%;height:auto;display:block}
+.hero-img{flex:0 1 420px;min-width:0;position:relative;width:420px;height:420px}
+.hero-img img{width:100%;height:100%;display:block;object-fit:contain}
 .hero-text{flex:1;min-width:0;display:flex;flex-direction:column;gap:32px}
 .hero-h1{font-size:clamp(40px,5.6vw,72px);font-weight:400;line-height:1.1;color:#111;text-wrap:balance}
 .hero-ctas{display:flex;gap:16px 32px;flex-wrap:wrap}
@@ -64,18 +64,17 @@ p,h1,h2,h3{margin:0}
 @media(max-width:1024px){
 .nav,.hero,.sec,.work-grid{padding-left:40px;padding-right:40px}
 .bleed{--gx:40px}
-.hero{gap:32px;padding-bottom:56px}.hero-img{flex-basis:320px}
+.hero{gap:32px;padding-bottom:56px}.hero-img{flex-basis:320px;width:320px;height:320px}
 .sec{padding-top:88px}.about{margin-top:88px;padding-top:80px}.about-grid{padding-bottom:80px;gap:40px}
 .work-grid{gap:32px}
 .footer{padding-top:64px;padding-bottom:40px}
 }
 @media(max-width:768px){
 .hero{flex-direction:column;align-items:flex-start}
-.hero-img{flex:none;width:min(320px,80%);align-self:center}
+.hero-img{flex:none;width:min(320px,80%);height:320px;align-self:center}
 .work-grid{grid-template-columns:minmax(0,1fr)}
 .about-photo{flex:none;width:min(280px,80%)}
 .about-bio{flex-basis:100%}
-.ig-polaroid{grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 20px}
 }
 @media(max-width:640px){
 .nav,.hero,.sec,.work-grid{padding-left:20px;padding-right:20px}
