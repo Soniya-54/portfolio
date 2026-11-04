@@ -75,6 +75,7 @@ p,h1,h2,h3{margin:0}
 .work-grid{grid-template-columns:minmax(0,1fr)}
 .about-photo{flex:none;width:min(280px,80%)}
 .about-bio{flex-basis:100%}
+.ig-polaroid{grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 20px}
 }
 @media(max-width:640px){
 .nav,.hero,.sec,.work-grid{padding-left:20px;padding-right:20px}
@@ -92,6 +93,7 @@ p,h1,h2,h3{margin:0}
 .footer{padding-top:48px;padding-bottom:32px}
 .footer-meta{flex-direction:column;gap:8px}
 }
+@media(max-width:480px){.ig-polaroid{grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 14px;padding:0 8px}}
 </style>
 </helmet>
 <div style="background:#fff;color:#111;min-height:100vh;max-width:1200px;margin:0 auto">
