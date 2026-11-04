@@ -22,7 +22,9 @@ p,h1,h2,h3{margin:0}
 .card{position:relative;background:#EFEFEF;border:3.5px solid #111;z-index:1}
 .card::after{content:'';position:absolute;top:20px;left:20px;width:100%;height:100%;background:#1E1E1E;z-index:-1;pointer-events:none}
 .card-img{background:#D9D9D9;display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-size:13px;color:#666}
-.nav{display:flex;align-items:center;justify-content:space-between;padding:24px 80px;flex-wrap:wrap;gap:12px}
+.nav{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;padding:28px 80px;font-family:'Gochi Hand',cursive}
+.nav-logo{font-size:26px;color:#111}
+.nav-links{display:flex;gap:32px;font-size:22px;flex-wrap:wrap}
 .sec{padding:72px 80px 0}
 .two-col{display:flex;flex-wrap:wrap;gap:24px 64px}
 .two-col-label{flex:0 1 260px;font-size:clamp(28px,3vw,40px);line-height:1.1;color:#111}
@@ -46,22 +48,27 @@ p,h1,h2,h3{margin:0}
 .dark-sec{background:#111;color:#fff;padding:72px 80px}
 .footer{border-top:3px solid #111;padding:40px 80px;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:16px}
 @media(max-width:1024px){
-  .nav{padding:20px 40px}.sec{padding:56px 40px 0}
+  .nav{padding:28px 40px}.sec{padding:56px 40px 0}
   .dark-sec{padding:56px 40px}.footer{padding:40px 40px}
 }
 @media(max-width:640px){
-  .nav{padding:16px 20px}.sec{padding:40px 20px 0}
+  .nav{padding:20px}.nav-links{gap:20px;font-size:20px}.sec{padding:40px 20px 0}
   .dark-sec{padding:40px 20px}.footer{padding:32px 20px}
   .ba-img{height:220px}
 }
 </style>
 </helmet>
-<div style="background:#fff;min-height:100vh;max-width:1110px;margin:0 auto">
+<div style="background:#fff;min-height:100vh;max-width:1200px;margin:0 auto">
 
 <!-- NAV -->
 <header class="nav">
-  <a href="index.html#top" style="font-size:24px">Soniya Khadka ✦</a>
-  <a href="index.html#work" style="font-size:20px">← All work</a>
+  <a class="nav-logo" href="index.html#top">Soniya Khadka ✦</a>
+  <nav class="nav-links">
+    <a href="index.html#work">Work</a>
+    <a href="index.html#about">About</a>
+    <a href="#" class="js-email-link">Contact</a>
+    <a href="#" style="text-decoration:underline">Résumé</a>
+  </nav>
 </header>
 
 <!-- TITLE -->
@@ -145,17 +152,6 @@ p,h1,h2,h3{margin:0}
     <div class="stat-card"><div class="stat-num">+18%</div><div class="stat-label">Lift in trial start rate</div></div>
     <div class="stat-card"><div class="stat-num" style="font-size:clamp(32px,4vw,56px)">↓ 26% traffic</div><div class="stat-label">Banner removal — not the redesign</div></div>
     <div class="stat-card"><div class="stat-num" style="font-size:clamp(24px,3vw,40px);color:#fff">Colder audience, better rate</div><div class="stat-label">The page converted better even as fewer people reached it</div></div>
-  </div>
-</section>
-
-<!-- WHAT I'D DO NEXT -->
-<section class="sec" style="padding-bottom:80px">
-  <div class="two-col">
-    <h2 class="two-col-label">What I'd do next</h2>
-    <div class="two-col-body">
-      <p>The redesign removed friction but didn't address the plan split. 67% of career switchers choose yearly — there's room to design toward that choice more explicitly without reverting to the badge approach.</p>
-      <p>I'd also want to run this as a proper A/B test with equal traffic conditions to isolate the design's impact from the banner removal noise.</p>
-    </div>
   </div>
 </section>
 
