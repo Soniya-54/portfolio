@@ -30,7 +30,7 @@ p,h1,h2,h3{margin:0}
 .sec-title{font-size:clamp(36px,4.5vw,64px);line-height:1;color:#111;margin-bottom:36px}
 .prob-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:24px}
 .ba-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr));gap:32px}
-.ba-img{background:#D9D9D9;display:flex;align-items:center;justify-content:center;text-align:center;padding:20px;font-family:'JetBrains Mono',monospace;font-size:13px;color:#666;height:380px}
+.ba-img{background:#D9D9D9;display:block;width:100%;height:380px;object-fit:cover}
 .decision{padding:20px 0;border-bottom:2px solid #E5E5E0;display:flex;flex-direction:column;gap:6px}
 .decision-title{font-size:clamp(20px,2vw,28px);font-weight:400;color:#111}
 .decision-body{font-size:clamp(17px,1.8vw,24px);color:#444;line-height:1.45}
@@ -75,13 +75,6 @@ p,h1,h2,h3{margin:0}
   </div>
 </section>
 
-<!-- HERO IMAGE -->
-<section class="sec" style="padding-bottom:24px">
-  <div class="card-wrap">
-    <div class="card"><div class="card-img" style="height:420px">[Pricing page before / after]</div></div>
-  </div>
-</section>
-
 <!-- OVERVIEW -->
 <section class="sec">
   <div class="two-col">
@@ -109,11 +102,11 @@ p,h1,h2,h3{margin:0}
 <section class="sec">
   <div class="ba-grid">
     <figure style="margin:0;display:flex;flex-direction:column;gap:10px">
-      <div class="card-wrap"><div class="card"><div class="ba-img">[Before: strikethroughs, yellow badges, mixed CTAs]</div></div></div>
+      <div class="card-wrap"><div class="card"><img class="ba-img" src="old-pricing.png" alt="Pricing page before redesign"></div></div>
       <figcaption style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#757575">Before — 6 competing numbers, 3 shades of yellow</figcaption>
     </figure>
     <figure style="margin:0;display:flex;flex-direction:column;gap:10px">
-      <div class="card-wrap"><div class="card"><div class="ba-img">[After: real price, unified CTAs, reassurance in headline]</div></div></div>
+      <div class="card-wrap"><div class="card"><img class="ba-img" src="pricing.png" alt="Pricing page after redesign"></div></div>
       <figcaption style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#757575">After — one price, one message, one obvious next step</figcaption>
     </figure>
   </div>
