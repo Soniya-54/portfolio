@@ -37,9 +37,29 @@ p,h1,h2,h3{margin:0}
 .strip{display:flex;align-items:center;white-space:nowrap;gap:clamp(16px,3.2vw,56px);padding-top:16px;padding-bottom:16px;border-top:3px solid #111;border-bottom:3px solid #111;font-size:clamp(16px,2.2vw,30px);flex-wrap:nowrap;transform:rotate(2deg);position:relative;z-index:0}
 .sec{padding:112px 80px 0;font-family:'Gochi Hand',cursive;color:#111}
 .sec-title{font-size:clamp(32px,4vw,48px);font-weight:400;line-height:1.1;margin:0 0 32px;text-wrap:balance}
-.work-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:40px;padding:0 80px}
-.work-grid .card{transition:transform .2s}
-.work-grid .card:hover{transform:rotate(0deg) scale(1.03) !important}
+.show{display:flex;flex-direction:column;gap:112px;padding:0 80px;font-family:'Gochi Hand',cursive}
+.show-row{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:56px;align-items:center;color:#111}
+.show-row.flip{grid-template-columns:minmax(0,5fr) minmax(0,7fr)}
+.show-row.flip .stage-wrap{order:2}
+.stage-wrap{position:relative;display:block;padding:0 16px 16px 0}
+.stage-wrap::before{content:'';position:absolute;top:16px;left:16px;right:0;bottom:0;background:#1E1E1E}
+.stage{position:relative;z-index:1;border:3px solid #111;aspect-ratio:5/4;overflow:hidden;padding:56px 48px 0;display:flex;align-items:flex-end}
+.frame{width:100%;max-width:100%;background:#fff;border:3px solid #111;border-bottom:0;border-radius:14px 14px 0 0;overflow:hidden;transform:rotate(-.5deg) translateY(4px);transition:transform .35s cubic-bezier(.2,.8,.2,1);box-shadow:0 24px 48px rgba(0,0,0,.18)}
+.show-row.flip .frame{transform:rotate(.5deg) translateY(4px)}
+.show-row:hover .frame{transform:rotate(0deg) translateY(0)}
+.frame-bar{display:flex;align-items:center;gap:8px;padding:10px 14px;border-bottom:3px solid #111}
+.frame-bar i{width:12px;height:12px;border-radius:50%;border:2px solid #111;display:block}
+.frame-url{flex:1;margin-left:10px;height:18px;border-radius:9px;background:#EFEFEF}
+.frame-img{aspect-ratio:16/11;background:#D9D9D9}
+.frame-img img{width:100%;height:100%;object-fit:cover;object-position:top;display:block}
+.show-text{display:flex;flex-direction:column;gap:16px;align-items:flex-start}
+.show-num{font-size:clamp(56px,7vw,96px);line-height:.9;color:transparent;-webkit-text-stroke:2px #111}
+.show-title{font-size:clamp(32px,3.6vw,48px);font-weight:400;line-height:1.05;margin:0;text-wrap:balance}
+.show-desc{font-size:clamp(19px,1.8vw,24px);line-height:1.4;color:#757575;margin:0;text-wrap:pretty}
+.show-tags{display:flex;flex-wrap:wrap;gap:8px}
+.show-tags>span{border:2px solid #111;border-radius:999px;padding:2px 14px;font-size:18px}
+.show-cta{font-size:clamp(22px,2.2vw,28px);color:#018FED;text-decoration:underline;text-underline-offset:6px}
+.show-soon{font-size:20px;color:#757575}
 .how-text{font-size:clamp(19px,2vw,28px);color:#757575;line-height:1.55;max-width:900px;text-wrap:pretty}
 .ig-link{display:inline-block;font-size:clamp(24px,3vw,36px);color:#018FED;text-decoration:underline;text-underline-offset:6px;margin-bottom:28px}
 .ig-polaroid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:40px 32px;padding:8px 8px 0}
@@ -65,22 +85,23 @@ p,h1,h2,h3{margin:0}
 .footer-meta{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:20px;color:#757575;border-top:2px solid #111;padding-top:20px;margin-top:24px}
 .bleed{width:100vw;margin-left:calc(50% - 50vw);--gx:80px;padding-left:calc(max(0px,50vw - 600px) + var(--gx)) !important;padding-right:calc(max(0px,50vw - 600px) + var(--gx)) !important}
 @media(max-width:1024px){
-.nav,.hero,.sec,.work-grid{padding-left:40px;padding-right:40px}
+.nav,.hero,.sec{padding-left:40px;padding-right:40px}
 .bleed{--gx:40px}
 .hero{gap:32px;padding-bottom:56px}.hero-img{flex-basis:320px;width:320px;height:320px}
 .sec{padding-top:88px}.about{margin-top:88px;padding-top:80px}.about-grid{padding-bottom:80px;gap:40px}
-.work-grid{gap:32px}
+.show{padding:0 40px;gap:88px}.show-row,.show-row.flip{gap:32px}.stage{padding:36px 28px 0}
 .footer{padding-top:64px;padding-bottom:40px}
 }
 @media(max-width:768px){
 .hero{flex-direction:column;align-items:flex-start}
 .hero-img{flex:none;width:min(320px,80%);height:320px;align-self:center}
-.work-grid{grid-template-columns:minmax(0,1fr)}
+.show-row,.show-row.flip{grid-template-columns:minmax(0,1fr)}
+.show-row.flip .stage-wrap{order:0}
 .about-photo{flex:none;width:min(280px,80%)}
 .about-bio{flex-basis:100%}
 }
 @media(max-width:640px){
-.nav,.hero,.sec,.work-grid{padding-left:20px;padding-right:20px}
+.nav,.hero,.sec{padding-left:20px;padding-right:20px}
 .bleed{--gx:20px}
 .nav{padding-top:20px;padding-bottom:20px;flex-direction:column;align-items:flex-start;gap:12px}
 .nav-links{gap:20px;font-size:20px}
@@ -89,7 +110,7 @@ p,h1,h2,h3{margin:0}
 .strip{transform:none;gap:20px;font-size:18px;overflow-x:auto}
 .sec{padding-top:64px}.sec-title{margin-bottom:24px}
 .about{margin-top:64px;padding-top:64px}.about-grid{padding-bottom:64px;gap:32px}
-.work-grid{gap:24px}
+.show{padding:0 20px;gap:64px}.stage{padding:28px 20px 0}.frame-bar{padding:7px 10px}.frame-bar i{width:9px;height:9px}
 .card-label{padding:12px 16px}
 .chips{font-size:18px}
 .footer{padding-top:48px;padding-bottom:32px}
@@ -137,31 +158,78 @@ p,h1,h2,h3{margin:0}
 <section id="work" class="sec">
   <h2 class="sec-title">Selected Work</h2>
 </section>
-<div class="work-grid">
-  <a href="pricing-page.html" style="display:block;color:#111">
-    <div class="card-wrap"><div class="card">
-      <div class="card-img"><img src="./pricing.png" alt="Pricing page redesign" class="media-fill"></div>
-      <div class="card-label">Pricing Page Redesign</div>
-    </div></div>
-  </a>
-  <a href="home-page.html" style="display:block;color:#111">
-    <div class="card-wrap"><div class="card">
-      <div class="card-img"><img src="./home-page.png" alt="Home page redesign" class="media-fill"></div>
-      <div class="card-label">Home Page Redesign</div>
-    </div></div>
-  </a>
-  <a href="language-pages.html" style="display:block;color:#111">
-    <div class="card-wrap"><div class="card">
-      <div class="card-img"><img src="./language-specific.png" alt="Language-specific landing pages" class="media-fill"></div>
-      <div class="card-label">Language-specific Landing Pages</div>
-    </div></div>
-  </a>
-  <a href="black-friday.html" style="display:block;color:#111">
-    <div class="card-wrap"><div class="card">
-      <div class="card-img"><img src="./black-fridayy.png" alt="Black Friday campaign page" class="media-fill"></div>
-      <div class="card-label">Campaign-specific Landing Pages</div>
-    </div></div>
-  </a>
+<div class="show">
+  <div class="show-row">
+    <a href="pricing-page.html" class="stage-wrap">
+      <div class="stage" style="background:#E6E0FF">
+        <div class="frame">
+          <div class="frame-bar"><i style="background:#FF6B6B"></i><i style="background:#FFE566"></i><i style="background:#5BD69A"></i><span class="frame-url"></span></div>
+          <div class="frame-img"><img src="./pricing.png" alt="Pricing page redesign"></div>
+        </div>
+      </div>
+    </a>
+    <div class="show-text">
+      <span class="show-num">01</span>
+      <h3 class="show-title">Pricing Page Redesign</h3>
+      <p class="show-desc">Making plans easier to compare and pick.</p>
+      <div class="show-tags"><span>Programiz PRO</span><span>Pricing</span><span>UI</span></div>
+      <a href="pricing-page.html" class="show-cta">View case study →</a>
+    </div>
+  </div>
+
+  <div class="show-row flip">
+    <a href="home-page.html" class="stage-wrap">
+      <div class="stage" style="background:#FFE9C7">
+        <div class="frame">
+          <div class="frame-bar"><i style="background:#FF6B6B"></i><i style="background:#FFE566"></i><i style="background:#5BD69A"></i><span class="frame-url"></span></div>
+          <div class="frame-img"><img src="./home-page.png" alt="Home page redesign"></div>
+        </div>
+      </div>
+    </a>
+    <div class="show-text">
+      <span class="show-num">02</span>
+      <h3 class="show-title">Home Page Redesign</h3>
+      <p class="show-desc">A clearer first impression for new learners.</p>
+      <div class="show-tags"><span>Programiz PRO</span><span>Homepage</span><span>UX</span></div>
+      <a href="home-page.html" class="show-cta">View case study →</a>
+    </div>
+  </div>
+
+  <div class="show-row">
+    <a href="language-pages.html" class="stage-wrap">
+      <div class="stage" style="background:#FFF3A8">
+        <div class="frame">
+          <div class="frame-bar"><i style="background:#FF6B6B"></i><i style="background:#FFE566"></i><i style="background:#5BD69A"></i><span class="frame-url"></span></div>
+          <div class="frame-img"><img src="./language-specific.png" alt="Language-specific landing pages"></div>
+        </div>
+      </div>
+    </a>
+    <div class="show-text">
+      <span class="show-num">03</span>
+      <h3 class="show-title">Language-specific Landing Pages</h3>
+      <p class="show-desc">One system, a page for every language.</p>
+      <div class="show-tags"><span>Python</span><span>C</span><span>Java</span><span>JS</span><span>SQL</span></div>
+      <span class="show-soon">Case study coming soon</span>
+    </div>
+  </div>
+
+  <div class="show-row flip">
+    <a href="black-friday.html" class="stage-wrap">
+      <div class="stage" style="background:#FFD3E4">
+        <div class="frame">
+          <div class="frame-bar"><i style="background:#FF6B6B"></i><i style="background:#FFE566"></i><i style="background:#5BD69A"></i><span class="frame-url"></span></div>
+          <div class="frame-img"><img src="./black-fridayy.png" alt="Campaign-specific landing pages"></div>
+        </div>
+      </div>
+    </a>
+    <div class="show-text">
+      <span class="show-num">04</span>
+      <h3 class="show-title">Campaign-specific Landing Pages</h3>
+      <p class="show-desc">Seasonal offer pages built to convert fast.</p>
+      <div class="show-tags"><span>Black Friday</span><span>Campaign</span></div>
+      <span class="show-soon">Case study coming soon</span>
+    </div>
+  </div>
 </div>
 
 
