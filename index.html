@@ -31,10 +31,17 @@ p,h1,h2,h3{margin:0}
 .hero-img img{width:100%;height:100%;display:block;object-fit:contain}
 .hero-text{flex:1;min-width:0;display:flex;flex-direction:column;gap:24px}
 .hero-h1{font-size:clamp(38px,4.2vw,60px);font-weight:500;line-height:1.08;letter-spacing:-.045em;color:#111;text-wrap:balance}
-.hero-ctas{display:flex;gap:16px 32px;flex-wrap:wrap}
-.hero-cta{font-size:clamp(16px,1.35vw,19px);font-weight:500;text-decoration:underline;text-underline-offset:4px}
+.hero-ctas{display:flex;gap:12px;flex-wrap:wrap}
+.hero-cta{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:12px 18px;border:1.5px solid #018FED;border-radius:8px;font-size:16px;font-weight:600;line-height:1.2;text-decoration:none;transition:background-color .2s,color .2s,transform .2s}
+.hero-cta:hover{transform:translateY(-1px)}
+.hero-cta-primary,.hero-cta-primary:hover{background:#018FED;color:#fff !important}
+.hero-cta-primary:hover{background:#007BCB;border-color:#007BCB}
+.hero-cta-secondary,.hero-cta-secondary:hover{background:#fff;color:#0878C9 !important}
+.hero-cta-secondary:hover{background:#F2F8FC}
+.hero-cta svg{width:18px;height:18px;flex:none}
+.hero-cta:focus-visible{outline:3px solid rgba(1,143,237,.35);outline-offset:3px}
 .strip-outer{margin:24px 0 8px;position:relative}
-.strip{display:flex;align-items:center;white-space:nowrap;gap:clamp(18px,2.8vw,40px);padding:14px 0;border-top:2px solid #111;border-bottom:2px solid #111;font-size:clamp(15px,1.5vw,20px);flex-wrap:nowrap;transform:rotate(1deg);position:relative;z-index:0}
+.strip{display:flex;align-items:center;justify-content:center;white-space:nowrap;gap:clamp(18px,2.8vw,40px);padding:14px 0;border-top:2px solid #111;border-bottom:2px solid #111;font-size:clamp(15px,1.5vw,20px);flex-wrap:nowrap;transform:rotate(1deg);position:relative;z-index:0}
 .sec{padding:88px 80px 0;font-family:Inter,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;color:#111}
 .how-sec{background:rgba(1,143,237,.35);padding-bottom:112px}
 .sec-title{font-size:clamp(28px,2.7vw,38px);font-weight:500;letter-spacing:-.035em;line-height:1.15;margin:0 0 28px;text-wrap:balance}
@@ -109,7 +116,7 @@ p,h1,h2,h3{margin:0}
 .nav-links{gap:20px;font-size:20px}
 .hero{padding-top:16px;padding-bottom:40px;gap:24px}
 .hero-text{gap:20px}
-.strip{transform:none;gap:20px;font-size:18px;overflow-x:auto}
+.strip{transform:none;justify-content:flex-start;gap:20px;font-size:16px;overflow-x:auto}
 .sec{padding-top:64px}.sec-title{margin-bottom:24px}
 .how-sec{padding-bottom:64px}
 .about{margin-top:64px;padding-top:64px}.about-grid{padding-bottom:64px;gap:32px}
