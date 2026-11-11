@@ -47,13 +47,13 @@ p,h1,h2,h3{margin:0}
 .tbl td:not(:first-child){text-align:right}
 .tbl th:not(:first-child){text-align:right}
 .dark-sec{background:#111;color:#fff;padding:64px 80px}
-.footer{border-top:2px solid #111;padding:36px 80px;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:16px}
+.footer{border-top:1px solid #ccc;padding:36px 0 40px;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:24px;width:calc(100vw - 128px);max-width:none;margin-left:calc(50% - 50vw + 64px)}.footer a{font-size:20px;font-weight:400;line-height:1.4}.footer-next{display:flex;align-items:baseline;gap:10px;color:#111;text-decoration:none}.footer-next span{font-size:20px;font-weight:400}.footer .back{color:#0878c9;text-decoration:underline;text-underline-offset:4px}
 @media(max-width:1024px){
-  .nav{padding:24px 40px}.sec{padding:48px 40px 0}
+  .nav{padding:24px 40px}.sec{padding:48px 40px 0}.footer{width:calc(100vw - 80px);margin-left:calc(50% - 50vw + 40px);padding:32px 0 36px}
   .dark-sec{padding:48px 40px}.footer{padding:36px 40px}
 }
 @media(max-width:640px){
-  .nav{padding:20px}.nav-links{gap:18px;font-size:15px}.sec{padding:40px 20px 0}
+  .nav{padding:20px}.nav-links{gap:18px;font-size:15px}.sec{padding:40px 20px 0}.footer{width:calc(100vw - 40px);margin-left:calc(50% - 50vw + 20px);padding:24px 0 32px;align-items:flex-start;flex-direction:column;gap:16px}
   .two-col{gap:18px 28px}.two-col-body{flex-basis:100%}
   .dark-sec{padding:40px 20px}.footer{padding:28px 20px}
   .ba-crop{height:220px}
@@ -157,11 +157,8 @@ p,h1,h2,h3{margin:0}
 
 <!-- FOOTER -->
 <footer class="footer">
-  <a href="language-pages.html" style="display:flex;flex-direction:column;gap:6px">
-    <p style="font-family:'JetBrains Mono',monospace;font-size:13px;color:{{accent}}">Next · 02</p>
-    <p style="font-size:clamp(22px,2.5vw,34px);color:#111">Language-specific Landing Pages →</p>
-  </a>
-  <a href="index.html#work" style="font-size:22px;color:{{accent}};text-decoration:underline">← All work</a>
+  <a href="language-pages.html" class="footer-next"><span>Next · 02</span><span>Language-specific Landing Pages →</span></a>
+  <a href="index.html#work" class="back">← All work</a>
 </footer>
 
 </div>
