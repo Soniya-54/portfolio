@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>Pricing Page Redesign — Soniya Khadka</title>
+<title>Pricing Page Redesign | Soniya Khadka</title>
 <script src="./vendor/react.js"></script>
 <script src="./vendor/react-dom.js"></script>
 <script src="./support.js"></script>
@@ -88,9 +88,9 @@ p,h1,h2,h3{margin:0}
   <div class="two-col">
     <h2 class="two-col-label">Overview</h2>
     <div class="two-col-body">
-      <p>The pricing page was getting traffic but underperforming on trial starts.</p>
-      <p>The core problem: the page worked so hard to look like a deal that it had stopped looking trustworthy. I stripped it back, removed the fiction, and let the product speak for itself.</p>
-      <p>Result: trial start rate lifted <span style="background:#FFE566;padding:0 4px">18%</span> — on a colder, smaller audience than before.</p>
+      <p>People were visiting the pricing page, but too few were starting a trial.</p>
+      <p>The pricing was hard to trust. Crossed-out prices, savings badges, and competing buttons made a simple choice feel complicated. I simplified the page so people could compare plans and see the real cost more easily.</p>
+      <p>After the redesign, the trial start rate rose <span style="background:#FFE566;padding:0 4px">18%</span>, even as traffic fell and the audience got colder.</p>
     </div>
   </div>
 </section>
@@ -100,8 +100,8 @@ p,h1,h2,h3{margin:0}
   <div class="two-col">
     <h2 class="two-col-label">The problem</h2>
     <div class="two-col-body">
-      <p>The yearly plan showed <strong>$288 crossed out</strong>, replaced by <strong>$9/month</strong>. To a visitor reading it cold, a $288 product dropping to $9 reads as a dark pattern, not a discount.</p>
-      <p>Savings badges, competing CTAs, a money-back seal, and six numbers to mentally reconcile before deciding. The page was anxious. It didn't trust the product to sell itself.</p>
+      <p>The yearly plan showed <strong>$288 crossed out</strong> beside <strong>$9/month</strong>. Without clear context, that can make a legitimate offer feel misleading. Visitors had to work out the real annual cost before they could compare plans.</p>
+      <p>The page also had savings badges, several competing buttons, a money-back seal, and six different prices. All that detail distracted from the decision people came to make: which plan works for them?</p>
     </div>
   </div>
 </section>
@@ -111,11 +111,11 @@ p,h1,h2,h3{margin:0}
   <div class="ba-grid">
     <figure style="margin:0;display:flex;flex-direction:column;gap:10px">
       <div class="card-wrap"><div class="card"><img class="ba-img" src="old-pricing.png" alt="Pricing page before redesign"></div></div>
-      <figcaption style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#757575">Before — 6 competing numbers, 3 shades of yellow</figcaption>
+      <figcaption style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#757575">Before: six prices and three shades of yellow</figcaption>
     </figure>
     <figure style="margin:0;display:flex;flex-direction:column;gap:10px">
       <div class="card-wrap"><div class="card"><img class="ba-img" src="pricing.png" alt="Pricing page after redesign"></div></div>
-      <figcaption style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#757575">After — one price, one message, one obvious next step</figcaption>
+      <figcaption style="font-family:'JetBrains Mono',monospace;font-size:12px;color:#757575">After: clear pricing and one next step</figcaption>
     </figure>
   </div>
 </section>
@@ -125,11 +125,11 @@ p,h1,h2,h3{margin:0}
   <div class="two-col">
     <h2 class="two-col-label">What I changed</h2>
     <div class="two-col-body" style="color:#111">
-      <div class="decision"><p class="decision-title">Showed the real billing amount</p><p class="decision-body">Yearly plan: $108/year. Not $9/month-when-you-squint.</p></div>
-      <div class="decision"><p class="decision-title">Removed strikethrough prices</p><p class="decision-body">If we're always discounted, the original price is fiction. Removing it removes the trigger for skepticism.</p></div>
-      <div class="decision"><p class="decision-title">Moved savings into the plan label</p><p class="decision-body">"Most Popular (Save $120)" — once, quietly, in context. Not shouting from a separate badge.</p></div>
-      <div class="decision"><p class="decision-title">Rewrote the header to lead with the trial</p><p class="decision-body"><em>7 days free. No charge today. Cancel anytime.</em> — reassurance moved upstream, where the hesitation actually is.</p></div>
-      <div class="decision" style="border-bottom:none"><p class="decision-title">Unified the CTAs</p><p class="decision-body">The old page used a ghost button for monthly — silently discouraging it. Both options should feel equally reachable.</p></div>
+      <div class="decision"><p class="decision-title">Made the full price clear</p><p class="decision-body">The yearly plan now shows $108 per year, so people can see the amount they will actually pay.</p></div>
+      <div class="decision"><p class="decision-title">Removed crossed-out prices</p><p class="decision-body">A discount that is always there can make the original price feel made up. Removing it helped the offer feel more straightforward.</p></div>
+      <div class="decision"><p class="decision-title">Put the saving beside the plan</p><p class="decision-body">I kept “Most Popular (Save $120)” with the plan, where it helps people compare, instead of using a separate badge.</p></div>
+      <div class="decision"><p class="decision-title">Led with the trial terms</p><p class="decision-body">I moved <em>7 days free. No charge today. Cancel anytime.</em> higher on the page, where people could see the terms before choosing.</p></div>
+      <div class="decision" style="border-bottom:none"><p class="decision-title">Gave both plans equal weight</p><p class="decision-body">The monthly option had a ghost button before. I made both calls to action equally clear, so either plan feels easy to choose.</p></div>
     </div>
   </div>
 </section>
@@ -138,7 +138,7 @@ p,h1,h2,h3{margin:0}
 <section class="dark-sec" style="margin-top:64px">
   <div class="two-col" style="margin-bottom:32px">
     <h2 class="two-col-label" style="color:#fff">What happened</h2>
-    <p class="two-col-body" style="color:#D4D7DE">Launch: May 21, 2026. Around the same time, Programiz removed PRO promotional banners from the main site — so the pricing page received less traffic and a colder audience. Despite that, trial start rate improved.</p>
+    <p class="two-col-body" style="color:#D4D7DE">The redesign launched on May 21, 2026. Around the same time, Programiz removed PRO banners from the main site. The pricing page then saw 26% less traffic and a colder audience. Even so, the trial start rate increased.</p>
   </div>
   <div style="overflow-x:auto">
     <table class="tbl">
@@ -151,7 +151,7 @@ p,h1,h2,h3{margin:0}
   </div>
   <div class="stat-grid">
     <div class="stat-card"><div class="stat-num">+18%</div><div class="stat-label">Lift in trial start rate</div></div>
-    <div class="stat-card"><div class="stat-num" style="font-size:clamp(32px,4vw,56px)">↓ 26% traffic</div><div class="stat-label">Banner removal — not the redesign</div></div>
+    <div class="stat-card"><div class="stat-num" style="font-size:clamp(32px,4vw,56px)">↓ 26% traffic</div><div class="stat-label">Traffic fell after the banners were removed</div></div>
     <div class="stat-card"><div class="stat-num" style="font-size:clamp(24px,3vw,40px);color:#fff">Colder audience, better rate</div><div class="stat-label">The page converted better even as fewer people reached it</div></div>
   </div>
 </section>
